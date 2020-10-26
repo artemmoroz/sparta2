@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuperTestSuite">
+
+    <test name="Regresssion Test">
+        <classes>
+            <class name="com.starta.tests.StoreTestSmoke">
+                <parameter name="email" value="admin"></parameter>
+            </class>
+            <class name="com.starta.tests.StoreTestSmoke">
+                <parameter name="email" value="manager"></parameter>
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
