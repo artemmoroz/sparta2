@@ -2,15 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SuperTestSuite">
 
+    <parameter name="name" value="varvara"></parameter>
+    <parameter name="age" value="18"></parameter>
+
+    <listeners>
+        <listener class-name="com.group2.tests.TestListener"></listener>
+    </listeners>
+
     <test name="Store Test">
         <classes>
-            <class name="com.starta.tests.StoreTestSmoke">
-                <methods>
-                    <include name="test2"/>
-                </methods>
-                <parameter name="a" value="2"></parameter>
-                <parameter name="b" value="3"></parameter>
-            </class>
+            <class name="com.group2.tests.MyFirstTest"/>
         </classes>
     </test>
 

@@ -4,7 +4,7 @@
     "pass": "dgsdgag",
     "age": 325.3,
     "isMale": true,
-    "childs": [
+    "kids": [
       {
         "name": "max",
         "age": 45
@@ -24,7 +24,7 @@
     "pass": "dgsd2gag",
     "age": 325.3,
     "isMale": true,
-    "childs": [
+    "kids": [
       {
         "name": "m2ax",
         "age": 45
