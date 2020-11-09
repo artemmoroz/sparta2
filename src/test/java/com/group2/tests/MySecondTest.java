@@ -122,12 +122,30 @@ public class MySecondTest extends BaseTest{
     }
 
 
+    public static void main(String[] args) {
+        int i = 0;
+        String loginLocator = "//input[@id='mailbox:login-input']["+i+"]";
+
+        $(By.xpath(loginLocator)).setValue("xxxxxxxx");
+
+
+
+        SelenideElement enterPass = $(By.xpath("//input[@id='mailbox:login-input']"));
+        enterPass.setValue("xxxxx");
+        enterPass.setValue("yyyy");
+        enterPass.getValue();
+
+        $(By.xpath("//input[@id='mailbox:loirtyirtyirtogin-iytirirtyinput']")).setValue("xxxxxxxx");
+
+
+    }
+
     @Test(dataProvider = "edostavka")
     @Severity(SeverityLevel.CRITICAL)
     @Description("dsgsdgsg")
     @TmsLink("JIRA-352")
     @Attachment
-    public void findCoffeePrice(String searchText, String priceXpath, double expectedPrice) {
+    public void findCoffeePrice(String searchText, Object priceXpath, double expectedPrice) {
 
         open("https://e-dostavka.by/");
 
