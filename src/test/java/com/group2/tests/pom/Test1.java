@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Driver;
 import com.codeborne.selenide.SelenideElement;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javafaker.Faker;
 import com.google.gson.JsonObject;
 import jdk.nashorn.internal.parser.JSONParser;
 import lombok.Data;
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Locale;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -28,6 +30,8 @@ import static com.codeborne.selenide.Selenide.$;
 public class Test1 {
 
     private static final String filePath = "src/test/resources/cart.json";
+
+    Faker faker = new Faker(new Locale("ru"));
 
 
     @Data
@@ -105,16 +109,21 @@ public class Test1 {
     @Test(dataProvider = "message2")
     public void message2(List<Message> list){
         System.out.println(list.size());
+
+
     }
 
 
     public static void main(String[] args) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        EmailData emailData = mapper.readValue(Paths.get(filePath).toFile(), EmailData.class);
-        System.out.println(emailData.getLogin());
+        Faker faker = new Faker(new Locale("ru"));
 
-        System.out.println(emailData.getMessages().get(0).getRecipient());
+        String name = faker.name().fullName(); // Miss Samanta Schmidt
+        String firstName = faker.name().firstName(); // Emory
+        String lastName = faker.name().lastName(); // Barton
 
+        String streetAddress = faker.address().streetAddress(); // 60018 Sawayn Brooks Suite 449
+
+        System.out.println(1);
 
     }
 
