@@ -22,8 +22,7 @@ public class MainPage extends BasePage {
 
     SelenideElement content = $("fsdf");
 
-    public MainPage() {
-        content.waitUntil(Condition.appear);
+    public MainPage(){
     }
 
     public void login(String u, String p){

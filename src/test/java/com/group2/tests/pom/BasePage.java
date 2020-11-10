@@ -12,6 +12,7 @@ public class BasePage {
 
    public void open(String url){
        //
+
    }
 
 }

@@ -12,6 +12,9 @@
     <test name="Store Test">
         <classes>
             <class name="com.group2.tests.MySecondTest">
+                <methods>
+
+                </methods>
             </class>
         </classes>
     </test>
