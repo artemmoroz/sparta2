@@ -34,24 +34,26 @@ public class Test1 {
     Faker faker = new Faker(new Locale("ru"));
 
 
-    @Data
+   @Data
     public static class EmailData{
 
         String login;
         String password;
         List<Message> messages;
+
+
     }
 
-    @Data
+   @Data
     public static class Message{
         String recipient;
         String title;
         String body;
     }
 
-    static ObjectMapper mapper = new ObjectMapper();
+    ObjectMapper mapper = new ObjectMapper();
 
-    private static EmailData getEmailData() throws IOException {
+    private EmailData getEmailData() throws IOException {
         EmailData emailData = mapper.readValue(Paths.get(filePath).toFile(), EmailData.class);
         return emailData;
     }
@@ -96,6 +98,8 @@ public class Test1 {
     @Test(dataProvider = "sender")
     public void login(String login, String password){
         System.out.println(login + " "+password);
+        EmailData emailData = DataManager.getEmailData("xxx");
+        //emailData.getLogin(), emailData.getPassword();
     }
 
     @Test(dataProvider = "message")
