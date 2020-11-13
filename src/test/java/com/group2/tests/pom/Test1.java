@@ -98,7 +98,7 @@ public class Test1 {
     @Test(dataProvider = "sender")
     public void login(String login, String password){
         System.out.println(login + " "+password);
-        EmailData emailData = DataManager.getEmailData("xxx");
+        EmailData emailData = DataManager.getEmailData2("xxx");
         //emailData.getLogin(), emailData.getPassword();
     }
 

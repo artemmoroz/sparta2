@@ -71,10 +71,11 @@ public class LoginTest {
 
 
 
+
     public Object[][] sender() {    //args: String login, String password
 
         Object[][] sendData = new Object[0][];
-        DataManager.getEmailData("xxx");
+        DataManager.getEmailData2("xxx");
         return sendData;
     }
 
@@ -82,7 +83,7 @@ public class LoginTest {
     public Object[][] message() {
 
         Object[][] message = new Object[0][0];
-        DataManager.getEmailData("xxx");
+        DataManager.getEmailData2("xxx");
         return message;
     }
 
