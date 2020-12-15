@@ -17,9 +17,9 @@ public class TestClass {
 //
 //        System.out.println("**************");
 //
-//        List<Car> carList = new ArrayList<>();
+//        List<xxx.yyy.zzz.Car> carList = new ArrayList<>();
 //
-//        Map<String, Car> parking = new HashMap<>();
+//        Map<String, xxx.yyy.zzz.Car> parking = new HashMap<>();
 //
 //        parking.put("A12", truckCar);
 //        parking.put("C65", racingCar);

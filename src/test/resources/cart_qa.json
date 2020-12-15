@@ -1,0 +1,17 @@
+{
+  "login": "test1****@mail.ru",
+  "password": "****",
+  "messages":
+  [
+    {
+      "recipient": "test2****@mail.ru",
+      "title": "Test Mail",
+      "body": "What's up?"
+    },
+    {
+      "recipient": "test3***.com",
+      "title": "Test Gmail",
+      "body": "How r u doing?"
+    }
+  ]
+}

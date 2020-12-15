@@ -1,0 +1,28 @@
+     }else {
+            parkingPlaces.put(place, car);
+        }
+    }
+
+    public Car unparkCar(String place){//b12
+        return parkingPlaces.remove(place);
+    }
+
+    public int totalOccupied(){
+        return parkingPlaces.size();
+    }
+
+
+    public static void main(String[] args) {
+        ParkingMap parking = new ParkingMap();
+
+        Car car1 = new Car("blue", "bmw");
+
+        parking.parkCar(car1, "b12");
+
+        System.out.println("11 "+parking.totalOccupied());
+
+        Car car2 = new Car("red", "polo");
+
+        parking.parkCar(car2, "b12");
+
+        System.out.println("22 " +parking.t

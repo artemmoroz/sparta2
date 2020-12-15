@@ -1,12 +1,21 @@
 package by.issoft;
 
 
+import com.github.javafaker.Faker;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Locale;
 
 public class Car {
 
     int liters = 10;
+
+    public static void main(String[] args) {
+        Faker f = new Faker(new Locale("ru"));
+        System.out.println(f.name().fullName());
+    }
+
 
     public void drive(String city) throws IOException, AssertionError {
 
@@ -20,6 +29,7 @@ public class Car {
             print(city, true);
             liters -= city.length();
         }
+
     }
 
     public void refill(){
@@ -39,7 +49,7 @@ public class Car {
         System.out.println("parking");
     }
 
-    public static void main(String[] args) {
+    public static void mai3n(String[] args) {
         Car car = new Car();
 
         try {
