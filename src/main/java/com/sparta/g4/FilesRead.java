@@ -15,7 +15,6 @@ public class FilesRead {
 
         List<String> lines = Files.readAllLines(Paths.get(p));
 
-
         System.out.println(lines.size());
 
         //System.out.println(content);
