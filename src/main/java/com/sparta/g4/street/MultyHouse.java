@@ -1,8 +1,6 @@
 package com.sparta.g4.street;
 
-public class MultyHouse {//extends House {
-
-    List<House> fff;
+public class MultyHouse extends House {
 
     public MultyHouse(int number) {
         super(number);
