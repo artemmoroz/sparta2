@@ -1,7 +1,8 @@
 package com.sparta.g4.cars;
 
 
-import by.issoft.sparta.TruckCar;
+
+import com.sparta.g4.Human;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Map<String, Car> parking = new HashMap<>();
 
-        CivilCar ccar = new CivilCar(1.6, 4, 65.0, 24);
+        Car ccar = new CivilCar(1.6, 4, 65.0, 24);
         ccar.park("Brest");
         //ccar.drive1(1 ,"xx");
         System.out.println("-----------------");
@@ -21,6 +22,7 @@ public class Main {
 
         Truck truck = new Truck(2.0,8,10,16);
         truck.park("Paris");
+        ccar.engineVolume = 3;
 
         parking.put("cc", ccar);
         parking.put("truk", truck);
