@@ -5,7 +5,7 @@ import lombok.*;
 @AllArgsConstructor
 @Data
 public class Flat implements Calculatable{
-
+//dsfs
     private int number;
     private int people;
     private int square;
