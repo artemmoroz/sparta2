@@ -1,9 +1,9 @@
 [
   {
-    "userName": "artem",
+    "username": "artem",
     "pass": "dgsdgag",
     "age": 325.3,
-    "isMale": true,
+    "ismale": true,
     "kids": [
       {
         "name": "max",
@@ -17,13 +17,17 @@
     "roles": [
       "admin",
       "manager"
-    ]
+    ],
+    "wife": {
+      "name": "klava",
+      "ismale": false
+    }
   },
   {
-    "userName": "artem2",
-    "pass": "dgsd2gag",
+    "username": "artem2",
+    "pass": "2020-12-23_13:11:21",
     "age": 325.3,
-    "isMale": true,
+    "ismale": true,
     "kids": [
       {
         "name": "m2ax",
