@@ -34,11 +34,14 @@ public class Cinema {
 
 
     public Hall getHall(String hallName) {
+        Hall ss = null;
         for(Hall hall: halls){
             if(hall.getName().equals(hallName)){
-                return hall;
+                //return hall;
+                ss = hall;
+                break;
             }
         }
-        return null;
+        return ss;
     }
 }

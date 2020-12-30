@@ -9,6 +9,7 @@ public abstract class Movie {
 
     String name;
     double netPrice = 10;
+    String genre;
 
     public Movie(String name) {
         this.name = name;
