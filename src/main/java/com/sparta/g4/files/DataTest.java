@@ -17,14 +17,14 @@ public class DataTest {
 
         String p = "/Users/artemmoroz/Projects/training/sparta/src/main/resources/users.json";
 
-        File d = new File("src"+File.separator+"main"+File.separator+"resources"+File.separator+"users.json");
-
-        Path path = Paths.get("src", "main", "resources", "users.json");
-
-        File testuser = new File("testUser.json");
-
-        String content = new String(Files.readAllBytes(testuser.toPath()));
-        System.out.println(content);
+//        File d = new File("src"+File.separator+"main"+File.separator+"resources"+File.separator+"users.json");
+//
+//        Path path = Paths.get("src", "main", "resources", "users.json");
+//
+//        File testuser = new File("testUser.json");
+//
+//        String content = new String(Files.readAllBytes(testuser.toPath()));
+//        System.out.println(content);
 
 //        UserJson aaa = new ObjectMapper().readValue(this.getClass().getClassLoader().getResourceAsStream("users.json"), UserJson.class);
 //        System.out.println(aaa.getUsername());
@@ -32,7 +32,7 @@ public class DataTest {
         List<UserJson> userJsons =
                 new ObjectMapper()
                         .readValue(new File(p), new TypeReference<List<UserJson>>() {});
-        System.out.println(userJsons.get(1).getUsername());
+        System.out.println(userJsons.get(1).getKids().get(1).getName());
 //
 //        UserJson artem2 = new UserJson();
 //        artem2.setUsername("sdgsdgsh");

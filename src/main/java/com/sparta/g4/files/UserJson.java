@@ -26,12 +26,5 @@ public class UserJson {
     @JsonIgnore
     String aaa;
 
-    @Data
-    @Accessors(chain = true)
-    public static class UserKids{
-
-        String name;
-        int age;
-    }
 
 }

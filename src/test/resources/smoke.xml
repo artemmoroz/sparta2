@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SuperTestSuite">
+<suite name="SmokeTestsForSum">
 
-    <parameter name="name" value="varvara"></parameter>
-    <parameter name="age" value="18"></parameter>
+    <parameter name="x" value="2"></parameter>
+    <parameter name="y" value="3"></parameter>
 
-    <listeners>
-        <listener class-name="com.group2.tests.TestListener"></listener>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="com.group2.tests.TestListener"></listener>-->
+<!--    </listeners>-->
 
     <test name="Store Test">
+
         <classes>
-            <class name="com.group2.tests.MySecondTest">
-                <methods>
-                    <include name="gg"/>
-                </methods>
+           <class name="com.sparta.g4.SumClassTest">
+           </class>
+            <class name="com.sparta.g4.SumClassTest">
+                <parameter name="data" value="111"></parameter>
             </class>
-            <class name="com.group2.tests.MySecondTest"/>
         </classes>
+<!--        <packages>-->
+<!--            <package name="com.sparta.g4"></package>-->
+<!--        </packages>-->
     </test>
 
 </suite>

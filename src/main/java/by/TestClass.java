@@ -1,3 +1,5 @@
+package by;
+
 import cpm.sparta.g2.Car;
 
 public class TestClass {

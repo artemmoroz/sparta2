@@ -2,6 +2,8 @@ package com.sparta.g4.exc;
 
 
 import java.rmi.AlreadyBoundException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestClass {
 
@@ -55,6 +57,24 @@ public class TestClass {
             throw new ClassNotFoundException("cccc", e);
         }
         t.repair();
+
+        int index = 7;
+        List<String> ss = new ArrayList<>();
+
+             if(ss.size()>=index){
+                        ss.get(index);
+                 }else{
+                        System.out.println("ddd");
+                   }
+//        try {
+//            processIndex(index);
+//            //ss.get(index);
+//        }catch (IndexOutOfBoundsException ee){
+//            //one more index
+//        }
+
+
+
     }
 
 
