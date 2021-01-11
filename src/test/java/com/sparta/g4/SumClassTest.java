@@ -3,6 +3,7 @@ package com.sparta.g4;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -32,6 +33,11 @@ public class SumClassTest {
         Assert.assertEquals(dataClass.getName(), "trusi2");
     }
 
+
+    @BeforeMethod
+    public void ss(){
+
+    }
 
     @Test(dataProvider = "getSumData")
     public void sumTest(int x, int y, String message){
