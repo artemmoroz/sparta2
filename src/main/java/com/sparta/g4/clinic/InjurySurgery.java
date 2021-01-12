@@ -11,8 +11,8 @@ public class InjurySurgery extends Surgery {
     public InjurySurgery(int number) {
         super(8, 20, number);
         supportedDiagnoses = new HashMap<>();
-        supportedDiagnoses.put("arm", 6);
-        supportedDiagnoses.put("chmt", 10);
+        supportedDiagnoses.put("arm", 2);
+        supportedDiagnoses.put("chmt", 1);
         supportedDiagnoses.put("neck", 2);
         supportedDiagnoses.put("leg", 2);
     }

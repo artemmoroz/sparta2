@@ -51,17 +51,16 @@ public class Surgery {
             lastDate = t.getKey();
             int time = t.getValue();
             if(time<=manipulationDuration){
-
                 int newTime = time-manipulationDuration;
                 spareTime.put(lastDate, newTime);
-
                 return lastDate;
             }
         }
         if(lastDate==null){
             lastDate = new Date();
+        }else {
+            lastDate.setDate(lastDate.getDate() + 1);
         }
-        lastDate.setDate(lastDate.getDate()+1);
         spareTime.put(lastDate, closeTime-openTime-manipulationDuration);
         return lastDate;
 

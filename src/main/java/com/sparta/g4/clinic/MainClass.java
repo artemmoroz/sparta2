@@ -6,15 +6,14 @@ public class MainClass {
 
 
     public static void main(String[] args) {
+        System.out.println("Starting app");
         Clinic clinic = new Clinic("BSMP");
-
-        Surgery botox = new BotoxSurgery(1);
-        Surgery injury = new InjurySurgery(2);
-        Surgery common = new CommonSurgery(3);
 
         clinic.addSurgeries(
                 Arrays.asList(
-                        botox, injury, common
+                        new BotoxSurgery(1),
+                        new InjurySurgery(2),
+                        new CommonSurgery(3)
                 )
         );
 
@@ -28,7 +27,7 @@ public class MainClass {
         clinic.put(new Patient("Olga", "neck"));
         //end
 
-
+        System.out.println("Init finish");
         Patient vasja = new Patient("Vasja I", "leg");
 
         String operationDate = clinic.put(vasja);
