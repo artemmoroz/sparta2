@@ -16,4 +16,15 @@ public class InjurySurgery extends Surgery {
         supportedDiagnoses.put("neck", 2);
         supportedDiagnoses.put("leg", 2);
     }
+
+    public void xx(){
+
+    }
+
+    @Override
+    public Integer getDiagnoseHours(String diagnose) {
+        //dfsdfsdf
+        return 0;
+        //return super.getDiagnoseHours(diagnose);
+    }
 }

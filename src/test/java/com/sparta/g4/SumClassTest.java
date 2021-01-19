@@ -3,10 +3,8 @@ package com.sparta.g4;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import org.w3c.dom.DOMErrorHandler;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +32,7 @@ public class SumClassTest {
     }
 
 
-    @BeforeMethod
+    @AfterMethod
     public void ss(){
 
     }

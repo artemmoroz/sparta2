@@ -10,8 +10,8 @@ import java.util.List;
 @Accessors(chain = true)
 public class Clinic {
 
-    String name;
-    List<Surgery> surgeries;
+    private String name;
+    private List<Surgery> surgeries;
 
 
     public Clinic(String name){
