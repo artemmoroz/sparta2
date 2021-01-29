@@ -1,16 +1,18 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SuperTestSuite">
+<suite name="Smoke Tests Suite">
 
-    <test name="Regresssion Test">
+    <parameter name="link" value="https://e-dostavka.by/"/>
+
+    <test name="Find Coffee Smoke Test">
         <classes>
-            <class name="com.starta.tests.StoreTestSmoke">
-                <parameter name="email" value="admin"></parameter>
+            <class name="com.sparta.g4.FindCoffee">
+                <parameter name="link" value="https://e-dostavka.by/"/>
+                <methods>
+                    <exclude name="FindCoffeeLavazza4"/>
+                </methods>
             </class>
-            <class name="com.starta.tests.StoreTestSmoke">
-                <parameter name="email" value="manager"></parameter>
-            </class>
-
         </classes>
     </test>
 
