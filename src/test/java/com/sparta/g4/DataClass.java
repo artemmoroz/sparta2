@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Accessors(chain = true)
-public class DataClass implements DataClass11 {
+public class DataClass {
 
     int size;
     String name;

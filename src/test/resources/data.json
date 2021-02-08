@@ -1,5 +1,20 @@
-{
-  "size": 34,
-  "name": "trusi",
-  "color": "black"
-}
+[
+  {
+    "user": {
+      "login": "sadsad",
+      "pass": "xxx"
+    },
+    "email": {
+      "recipient": "gfggg"
+    }
+  },
+  {
+    "user": {
+      "login": "sads222ad",
+      "pass": "xx333x"
+    },
+    "email": {
+      "recipient": "gfg555gg"
+    }
+  }
+]

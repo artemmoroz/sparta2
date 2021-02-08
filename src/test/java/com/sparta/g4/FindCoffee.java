@@ -1,5 +1,6 @@
 package com.sparta.g4;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -7,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
@@ -58,6 +60,23 @@ public class FindCoffee {
     @Test(dataProvider = "getInputCoffee")
     public void FindCoffeeLavazza2(String coffeeName, String pricePerKilo) {
 
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("os", "OS X");
+        caps.setCapability("os_version", "Big Sur");
+        caps.setCapability("browser", "Chrome");
+        caps.setCapability("browser_version", "86.0");
+        caps.setCapability("resolution", "1600x1200");
+        caps.setCapability("browserstack.local", "false");
+        caps.setCapability("browserstack.console", "info");
+        caps.setCapability("browserstack.networkLogs", "true");
+        caps.setCapability("browserstack.selenium_version", "3.14.0");
+
+        Configuration.browserCapabilities = caps;
+
+
+        Configuration.startMaximized = true;
+
+
         $x("//div[@class='main_menu__inner']//child::li[@id='main_menu__search']").click();
         $x("//input[@id='searchtext']").setValue(coffeeName).pressEnter();
         Assert.assertTrue(
@@ -71,18 +90,25 @@ public class FindCoffee {
                 "Цена за 1кг не совпадает");
 
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue("login");
-        softAssert.assertTrue("pass");
-        //do some action
-
-        Assert.assertEquals(
-                $x("//ul[@class='description']/li[last()]/span").getText(),
-                pricePerKilo,
-                "Цена за 1кг не совпадает");
-
-        softAssert.assertTrue("xxxx");
+//        softAssert.assertTrue("login");
+//        softAssert.assertTrue("pass");
+//        //do some action
+//
+//        Assert.assertEquals(
+//                $x("//ul[@class='description']/li[last()]/span").getText(),
+//                pricePerKilo,
+//                "Цена за 1кг не совпадает");
+//
+//        softAssert.assertTrue("xxxx");
         softAssert.assertAll();
 
+        getElement("login-input");
+        getElement("password-input");
+
+    }
+
+    public SelenideElement getElement(String id){
+        return $x("//*[@data-testid='"+id+"']");
     }
 
     @Test(dataProvider = "getInputCoffee")
